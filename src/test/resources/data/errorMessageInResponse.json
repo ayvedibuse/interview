@@ -1,0 +1,7 @@
+{
+  "error": {
+    "name": "mockRequestNotFoundError",
+    "message": "Double check your method and the request path and try again.",
+    "header": "No matching requests"
+  }
+}

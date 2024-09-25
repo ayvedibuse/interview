@@ -1,0 +1,31 @@
+{
+  "merchantID": 1234,
+  "hsn": "14012PP20131409",
+  "amount": 100,
+  "aid": "credit",
+  "authCode": 100,
+  "authMerchantId": "string",
+  "bin": false,
+  "beep": true,
+  "capture": true,
+  "clearDisplayDelay": 500,
+  "confirmAmount": true,
+  "createProfile": true,
+  "gzipSignature": false,
+  "includeAmountDisplay": true,
+  "includeAVS": true,
+  "includePIN": false,
+  "includeSignature": false,
+  "InvoiceId": 123456789012,
+  "orderID": 1233200399,
+  "printDelay": 0,
+  "printExtraReceipt": false,
+  "printReceipt": true,
+  "signatureDimensions": 0,
+  "signatureFormat": "png",
+  "termId": "string",
+  "userFields": {
+    "UDF1": "12345678",
+    "UDF2": "Good info here"
+  }
+}
