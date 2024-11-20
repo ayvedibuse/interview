@@ -73,7 +73,6 @@ public class AuthCardEndPoint {
     public void verify_field_is_generated(String fieldKeyValue) {
 
         jsonPath = thenPart.extract().jsonPath();
-        thenPart.body(fieldKeyValue, notNullValue());
         String fieldValue = jsonPath.getString(fieldKeyValue);
         Assert.assertNotNull(fieldValue);
     }
