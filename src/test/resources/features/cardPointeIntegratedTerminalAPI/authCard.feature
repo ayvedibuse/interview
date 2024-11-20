@@ -9,9 +9,37 @@ Feature: authCard endpoint
     And User send payload fields as request body from "requestBodyHappyPath.json" file
     When User send POST request to "/api/v3/authCard" end point
     Then Verify status code 200
-    Then Verify "token" field is generated
+    Then Verify "tokenn" field is generated
     Then Verify "expiry" field max length is 4
     Then Verify "expiry" field in the format MMYY and expiration date is bigger than current date
+    Then Verify "signature" field is "<base64-encoded, gzipped BMP>"
+
+    @US1-AC2
+  Scenario: Verify all response fields meets with the requirements written in the document
+
+    Given Content-Type is "application/json"
+    And "Authorization" header is "0"
+    And "X-CardConnect-SessionKey" header is "0"
+    And User send payload fields as request body from "requestBodyHappyPath.json" file
+    When User send POST request to "/api/v3/authCard" end point
+    Then Verify status code 200
+    Then Verify "token" field is generated
+    Then Verify "expiryy" field max length is 4
+    Then Verify "expiry" field in the format MMYY and expiration date is bigger than current date
+    Then Verify "signature" field is "<base64-encoded, gzipped BMP>"
+
+    @US1-AC3
+  Scenario: Verify all response fields meets with the requirements written in the document
+
+    Given Content-Type is "application/json"
+    And "Authorization" header is "0"
+    And "X-CardConnect-SessionKey" header is "0"
+    And User send payload fields as request body from "requestBodyHappyPath.json" file
+    When User send POST request to "/api/v3/authCard" end point
+    Then Verify status code 200
+    Then Verify "token" field is generated
+    Then Verify "expiry" field max length is 4
+    Then Verify "expiryy" field in the format MMYY and expiration date is bigger than current date
     Then Verify "signature" field is "<base64-encoded, gzipped BMP>"
 
   @US2-AC1
