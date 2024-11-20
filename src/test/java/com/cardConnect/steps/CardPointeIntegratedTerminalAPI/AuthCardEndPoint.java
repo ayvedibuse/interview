@@ -72,8 +72,10 @@ public class AuthCardEndPoint {
     @Then("Verify {string} field is generated")
     public void verify_field_is_generated(String fieldKeyValue) {
 
+        jsonPath = thenPart.extract().jsonPath();
         thenPart.body(fieldKeyValue, notNullValue());
-
+        String fieldValue = jsonPath.getString(fieldKeyValue);
+        Assert.assertNotNull(fieldValue);
     }
 
     @Then("Verify {string} field max length is {int}")
